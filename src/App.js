@@ -4,6 +4,7 @@ import './App.css';
 import FunctionalComponent from './function/FunctionalComponent';
 import RotateGivenComponent from './rotategiven/RotateGivenComponent';
 import ClassComponent from './class/ClassComponent';
+import InteractiveComponent from './interactive/InteractiveComponent';
 
 const HOC = RotateGivenComponent(FunctionalComponent);
 
@@ -18,6 +19,9 @@ function App() {
         <ClassComponent message="A higer order component" />
         <br/>
         <HOC/>
+        <br/>
+        <ClassComponent message="An interactive component" />
+        <InteractiveComponent />
     </div>
   );
 }
