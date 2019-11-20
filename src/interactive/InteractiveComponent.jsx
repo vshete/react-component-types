@@ -18,7 +18,7 @@ export default class InteractiveComponent extends React.Component {
     render() {
         return (
             <div className="interactive-component">
-                <div className="count">{this.state.counter}</div>
+                <div className="count">clicked {this.state.counter} times</div>
                 <button type="button" onClick={this.handleClick.bind(this)}>Click Me</button>
             </div>
         );
