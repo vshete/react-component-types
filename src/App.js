@@ -1,24 +1,23 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import FunctionalComponent from './function/FunctionalComponent';
+import RotateGivenComponent from './rotategiven/RotateGivenComponent';
+import ClassComponent from './class/ClassComponent';
+
+const HOC = RotateGivenComponent(FunctionalComponent);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <ClassComponent message="A Functional component" />
+        <FunctionalComponent />
+        <br />
+        <br />
+        <br />
+        <ClassComponent message="A higer order component" />
+        <br/>
+        <HOC/>
     </div>
   );
 }

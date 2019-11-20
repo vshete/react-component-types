@@ -20,3 +20,20 @@
 .App-link {
   color: #09d3ac;
 }
+
+.rotate {
+    animation: rotation 2s linear infinite;
+}
+
+.square {
+    margin-left: calc(50% - 100px);
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    background: green;
+}
+
+@keyframes rotation {
+    0% { transform: rotate(0) }
+    100% { transform: rotate(360deg) }
+}
