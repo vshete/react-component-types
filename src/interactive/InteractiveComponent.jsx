@@ -8,7 +8,7 @@ export default class InteractiveComponent extends React.Component {
         }
     }
 
-    handleClick() {
+    handleClick = () => {
         this.setState((prevState) => {
             prevState.counter += 1;
             return prevState;
@@ -19,7 +19,7 @@ export default class InteractiveComponent extends React.Component {
         return (
             <div className="interactive-component">
                 <div className="count">clicked {this.state.counter} times</div>
-                <button type="button" onClick={this.handleClick.bind(this)}>Click Me</button>
+                <button type="button" onClick={this.handleClick}>Click Me</button>
             </div>
         );
     }
